@@ -2,12 +2,9 @@ package zairastra.u5w1d3.entities;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.PropertySource;
-import zairastra.u5w1d3.entities.enums.OrderStatus;
 import zairastra.u5w1d3.entities.enums.TableStatus;
 
-import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -36,17 +33,18 @@ public class AppConfig {
         return new Table(4, 6, TableStatus.AVAILABLE);
     }
 
-    //non posso fare injection del settable qui?
-    @Bean(name = "o1")
-    @Primary
-    public Order o1() {
-        return new Order(1, OrderStatus.READY, 3, LocalTime.of(13, 3), List.of(pizzaSalamiXlBean(), pizzaHawaiianBean(), pizzaMargheritaBean(), toppingHamBean(), toppingCheeseBean(), lemonadeBean(), lemonadeBean(), wineBean()), t1());
-    }
+    //Creao Order come classe standard
 
-    @Bean(name = "o2")
-    public Order o2() {
-        return new Order(2, OrderStatus.WORK_IN_PROGRESS, 2, LocalTime.of(14, 30), List.of(pizzaMargheritaBean(), pizzaSalamiBean(), toppingPineappleBean(), lemonadeBean(), waterBean()), t2());
-    }
+//    @Bean(name = "o1")
+//    @Primary
+//    public Order o1() {
+//        return new Order(1, OrderStatus.READY, 3, LocalTime.of(13, 3), List.of(pizzaSalamiXlBean(), pizzaHawaiianBean(), pizzaMargheritaBean(), toppingHamBean(), toppingCheeseBean(), lemonadeBean(), lemonadeBean(), wineBean()), t1());
+//    }
+
+//    @Bean(name = "o2")
+//    public Order o2() {
+//        return new Order(2, OrderStatus.WORK_IN_PROGRESS, 2, LocalTime.of(14, 30), List.of(pizzaMargheritaBean(), pizzaSalamiBean(), toppingPineappleBean(), lemonadeBean(), waterBean()), t2());
+//    }
 
 
     @Bean(name = "toppings_tomato")
@@ -126,27 +124,27 @@ public class AppConfig {
         return new Drink("Wine", 607, 7.49);
     }
 
-    @Bean(name = "menu")
-    public Menu menuBean() {
-        List<Pizza> pizzaList = new ArrayList<>();
-        List<Drink> drinkList = new ArrayList<>();
-        List<Topping> toppingsList = new ArrayList<>();
-
-        pizzaList.add(pizzaMargheritaBean());
-        pizzaList.add(pizzaHawaiianBean());
-        pizzaList.add(pizzaSalamiBean());
-        pizzaList.add(pizzaSalamiXlBean());
-
-        drinkList.add(lemonadeBean());
-        drinkList.add(waterBean());
-        drinkList.add(wineBean());
-
-        toppingsList.add(toppingTomatoBean());
-        toppingsList.add(toppingCheeseBean());
-        toppingsList.add(toppingSalamiBean());
-        toppingsList.add(toppingHamBean());
-        toppingsList.add(toppingPineappleBean());
-
-        return new Menu(pizzaList, drinkList, toppingsList);
-    }
+    //rendo Menu un Component
+//    public Menu menuBean() {
+//        List<Pizza> pizzaList = new ArrayList<>();
+//        List<Drink> drinkList = new ArrayList<>();
+//        List<Topping> toppingsList = new ArrayList<>();
+//
+//        pizzaList.add(pizzaMargheritaBean());
+//        pizzaList.add(pizzaHawaiianBean());
+//        pizzaList.add(pizzaSalamiBean());
+//        pizzaList.add(pizzaSalamiXlBean());
+//
+//        drinkList.add(lemonadeBean());
+//        drinkList.add(waterBean());
+//        drinkList.add(wineBean());
+//
+//        toppingsList.add(toppingTomatoBean());
+//        toppingsList.add(toppingCheeseBean());
+//        toppingsList.add(toppingSalamiBean());
+//        toppingsList.add(toppingHamBean());
+//        toppingsList.add(toppingPineappleBean());
+//
+//        return new Menu(pizzaList, drinkList, toppingsList);
+//    }
 }

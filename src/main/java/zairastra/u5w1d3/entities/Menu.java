@@ -1,9 +1,9 @@
 package zairastra.u5w1d3.entities;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.ToString;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
@@ -13,13 +13,23 @@ import java.util.List;
 //così però la stampa è più ordinata
 @Getter
 @ToString
-@NoArgsConstructor
-@AllArgsConstructor
+//essendo Menu un Component, devo iniettare le liste
+//lo faccio tramite costruttore settato a mano
+//@NoArgsConstructor
+//@AllArgsConstructor
 //poteva essere un @Component
+@Component
 public class Menu {
     private List<Pizza> pizzaList;
     private List<Drink> drinkList;
     private List<Topping> toppingList;
+
+    @Autowired
+    public Menu(List<Pizza> pizzaList, List<Drink> drinkList, List<Topping> toppingList) {
+        this.pizzaList = pizzaList;
+        this.drinkList = drinkList;
+        this.toppingList = toppingList;
+    }
 
     public void printMenu() {
         System.out.println("******* Menu *******");
