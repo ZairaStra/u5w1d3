@@ -1,10 +1,10 @@
-package zairastra.u5w1d2;
+package zairastra.u5w1d3;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
-import zairastra.u5w1d2.entities.Menu;
-import zairastra.u5w1d2.entities.Order;
+import zairastra.u5w1d3.entities.Menu;
+import zairastra.u5w1d3.entities.Order;
 
 @Component
 public class MyRunner implements CommandLineRunner {

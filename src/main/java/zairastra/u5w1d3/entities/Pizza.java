@@ -1,4 +1,4 @@
-package zairastra.u5w1d2.entities;
+package zairastra.u5w1d3.entities;
 
 //Pizza di suo ha nome e una lista di Topping - non si può creare una pizza con ingredienti non compresi nella List<Topping>
 

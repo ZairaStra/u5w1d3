@@ -1,11 +1,11 @@
-package zairastra.u5w1d2.entities;
+package zairastra.u5w1d3.entities;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.PropertySource;
-import zairastra.u5w1d2.entities.enums.OrderStatus;
-import zairastra.u5w1d2.entities.enums.TableStatus;
+import zairastra.u5w1d3.entities.enums.OrderStatus;
+import zairastra.u5w1d3.entities.enums.TableStatus;
 
 import java.time.LocalTime;
 import java.util.ArrayList;

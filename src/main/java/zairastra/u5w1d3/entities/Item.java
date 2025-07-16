@@ -1,4 +1,4 @@
-package zairastra.u5w1d2.entities;
+package zairastra.u5w1d3.entities;
 
 
 //crea una classe astratta Item da cui discendono tutti gli elementi nel menu

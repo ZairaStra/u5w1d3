@@ -1,11 +1,11 @@
-package zairastra.u5w1d2.entities;
+package zairastra.u5w1d3.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
-import zairastra.u5w1d2.entities.enums.OrderStatus;
-import zairastra.u5w1d2.entities.enums.TableStatus;
+import zairastra.u5w1d3.entities.enums.OrderStatus;
+import zairastra.u5w1d3.entities.enums.TableStatus;
 
 import java.time.LocalTime;
 import java.util.List;
