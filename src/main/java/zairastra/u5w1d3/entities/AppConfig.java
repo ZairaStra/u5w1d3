@@ -33,7 +33,7 @@ public class AppConfig {
         return new Table(4, 6, TableStatus.AVAILABLE);
     }
 
-    //Creao Order come classe standard
+    //Creao Order come classe standard in MyRunner
 
 //    @Bean(name = "o1")
 //    @Primary

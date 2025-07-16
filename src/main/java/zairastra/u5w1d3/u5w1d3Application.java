@@ -7,7 +7,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import zairastra.u5w1d3.entities.Menu;
 
 @SpringBootApplication
 @Slf4j//cos'è????
@@ -18,9 +17,11 @@ public class u5w1d3Application {
 
         AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(u5w1d3Application.class);
 
-        Menu m = (Menu) ctx.getBean("menu");
+        //non serve più scrivere nell'application perchè è il runner che stampa
+        //altrimenti stampa sotto il menu ancora una volta
+//        Menu m = (Menu) ctx.getBean("menu");
 
-        m.printMenu();
+//        m.printMenu();
         ctx.close();
     }
 
