@@ -32,10 +32,15 @@ public class Order {
         }
     }
 
+    //metodo per calcolare il costo dei coperti totali - mi serve per un test
+    public double calcCoverCharge(double coverCharge) {
+        return numbCovers * coverCharge;
+    }
+
     //metodo per calcolare il totale compreso di coperto - application.properties - cover.charge
     public double calcBill(double coverCharge) {
         double itemsCost = items.stream().mapToDouble(Item::getPrice).sum();
-        return itemsCost + (numbCovers * coverCharge);
+        return itemsCost + calcCoverCharge(coverCharge);
     }
 
 
